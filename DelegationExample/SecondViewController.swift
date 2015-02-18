@@ -10,13 +10,19 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-  var initialViewController : ViewController!
+  var delegate : SecondViewControllerDelegate?
 
   @IBOutlet weak var messageTextField: UITextField!
 
   @IBAction func returnNewMessageToInitialViewController() {
-    initialViewController.messageTexts.append(self.messageTextField.text)
-    initialViewController.updateMessageTextUI()
+
+    self.delegate?.secondViewControllerDidCreateMessageText(self.messageTextField.text)
     self.dismissViewControllerAnimated(true, completion: nil)
   }
+}
+
+protocol SecondViewControllerDelegate : NSObjectProtocol  {
+
+func secondViewControllerDidCreateMessageText(messageText : String)
+
 }

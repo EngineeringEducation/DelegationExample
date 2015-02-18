@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SecondViewControllerDelegate {
 
   var messageTexts = ["Hello", "What's Up", "Oh Hey"]
 
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     let secondVC = segue.destinationViewController as SecondViewController
-    secondVC.initialViewController = self
+    secondVC.delegate = self
   }
 
   func updateMessageTextUI() {
@@ -31,6 +31,10 @@ class ViewController: UIViewController {
     })
   }
 
+  func secondViewControllerDidCreateMessageText(messageText: String) {
+    self.messageTexts.append(messageText)
+    self.updateMessageTextUI()
+  }
 
 }
 
