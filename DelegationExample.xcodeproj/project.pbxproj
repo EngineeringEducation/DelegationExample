@@ -13,6 +13,7 @@
 		B12427291A954E3C0060AA48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12427281A954E3C0060AA48 /* Images.xcassets */; };
 		B124272C1A954E3C0060AA48 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B124272A1A954E3C0060AA48 /* LaunchScreen.xib */; };
 		B12427381A954E3C0060AA48 /* DelegationExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12427371A954E3C0060AA48 /* DelegationExampleTests.swift */; };
+		B12427421A954F410060AA48 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12427411A954F410060AA48 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B12427311A954E3C0060AA48 /* DelegationExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelegationExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12427361A954E3C0060AA48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B12427371A954E3C0060AA48 /* DelegationExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegationExampleTests.swift; sourceTree = "<group>"; };
+		B12427411A954F410060AA48 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B12427211A954E3B0060AA48 /* AppDelegate.swift */,
 				B12427231A954E3B0060AA48 /* ViewController.swift */,
 				B12427251A954E3C0060AA48 /* Main.storyboard */,
+				B12427411A954F410060AA48 /* SecondViewController.swift */,
 				B12427281A954E3C0060AA48 /* Images.xcassets */,
 				B124272A1A954E3C0060AA48 /* LaunchScreen.xib */,
 				B124271F1A954E3B0060AA48 /* Supporting Files */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12427421A954F410060AA48 /* SecondViewController.swift in Sources */,
 				B12427241A954E3C0060AA48 /* ViewController.swift in Sources */,
 				B12427221A954E3B0060AA48 /* AppDelegate.swift in Sources */,
 			);

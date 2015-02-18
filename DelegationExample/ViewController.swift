@@ -10,14 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  var messageTexts = ["Hello", "What's Up", "Oh Hey"]
+
+  @IBOutlet weak var messageTextsTextView: UITextView!
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.updateMessageTextUI()
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let secondVC = segue.destinationViewController as SecondViewController
+    secondVC.initialViewController = self
+  }
+
+  func updateMessageTextUI() {
+    self.messageTextsTextView.text = self.messageTexts.reduce("", combine: { (first, second) -> String in
+      return "\(first)\n\(second)"
+    })
   }
 
 
